@@ -1,0 +1,79 @@
+<div class="container">
+  <h1>AJOUTER UN FILM</h1>
+  <div class="row">
+
+    <div class="col-md-12 col-lg-8 bg-white  p-2 rounded">
+      <form #lamine="ngForm" class="p-5">
+        <div>
+          <label for="film" class="col-form-label">Titre du film</label>
+          <div>
+            <input ngModel type="text" name="filmos" class="form-control" id="film" required="true">
+          </div>
+        </div>
+        <div class="mt-1">
+          <label for="exampleFormControlTextarea1" class="form-label">Déscription du film</label>
+          <textarea ngModel name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" required="true"></textarea>
+        </div>
+        <div>
+          <label for="acteurs" class="col-form-label">Acteurs</label>
+          <div>
+            <input ngModel name="acteurs" type="text" class="form-control" id="acteurs" required="true">
+          </div>
+        </div>
+        <div>
+          <label for="duree" class="col-form-label">Durée du film (en minutes)</label>
+          <div>
+            <input ngModel name="duree" type="text" class="form-control" id="duree" required="true">
+          </div>
+        </div>
+        <div>
+          <label for="annee" class="col-form-label">Année</label>
+          <div>
+            <input ngModel name="annee" type="number" class="form-control" id="annee" required="true">
+          </div>
+        </div>
+        <div>
+          <label for="formFile" class="form-label">Sélectionnez une image</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="mt-4">
+
+
+          <button type="button" [disabled]="!lamine.valid" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            AJOUTER
+          </button>
+          <a routerLink="" class="btn btn-outline-danger btn-lg ms-2">ANNULER</a>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">IMPORTANT !</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Mon serveur et mon espace de stockage sont limités. J'ai préféré désactiver l'option "AJOUTER UN FILM" pour éviter de saturer le serveur. Merci pour votre compréhension !
+                  </p>
+                  <img src="https://www.aoudjit.com/projetsdemo/films/assets/serveurubuntu.png" class="img404 mt-1 mb-4" alt="">
+
+                  <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true"><i class="bi bi-ubuntu me-3"></i>UBUNTU SERVER</li>
+                    <li class="list-group-item">CPU : 1 vCore</li>
+                    <li class="list-group-item">RAM : 512 Mo</li>
+                    <li class="list-group-item">SSD : 10 Go</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CONFIRMER</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

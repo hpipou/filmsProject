@@ -1,0 +1,10 @@
+.container{
+  color : white !important
+}
+.card-body{
+  color: rgb(13, 13, 24) !important
+}
+.card-img-top{
+  width: 100%;
+  height: 350px;
+}
